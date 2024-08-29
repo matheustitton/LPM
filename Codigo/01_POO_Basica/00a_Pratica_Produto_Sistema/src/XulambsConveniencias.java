@@ -55,7 +55,7 @@ public class XulambsConveniencias {
             System.out.print("Descrição do produto: ");
             descricao = teclado.nextLine();
             System.out.print("Valor unitário do produto: ");
-            valorUnitario = Double.parseDouble(teclado.nextLine());
+            valorUnitario = Double.parseDouble(teclado.nextLine().replace(",", "."));
             novo = new Produto();
             novo.registrar(descricao, valorUnitario);
             novosProdutos[quantosProdutos] = novo;
@@ -81,6 +81,7 @@ public class XulambsConveniencias {
     }
     
     public static void main(String[] args) {
-        
+        Produto[] produtos = cadastrarProdutos();
+
     }
 }
